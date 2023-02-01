@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="Intro">
+        <div>
+            <h1 style="text-align: center;">Ze Sun's <span></span> <code>showPortofolium()</code></h1>
+            <table>
+                <colgroup>
+                    <col span="2">
+                </colgroup>
+                <tr>
+                    <td>
+                        <picture>
+                            <source srcset="Profile.jpg"
+                                    media="(orientation: portrait)">
+                            <img src="Profile.jpg" alt="" width="300" height="350">
+                        </picture>
+                    </td>
+                    <td>
+                            <p>
+                                <b>Ze Sun</b> is a passionate and innovative fullstack developer, with rich experience and
+                                academic knowledge of numerous core technologies applied in modern web development and services. <br>
+                                Ze Sun is skilled in <i>JavaScript</i> and <i>HTML/CSS</i> web development, and is familiar with multiple mainstream
+                                front-end frameworks, including <i>React and Node.js</i>.
+                            </p> 
+                            <aside>
+                                <p>
+                                    <br>Apart from working knowledge, Ze has <strong>mastered algorithm design/analysis,
+                                    object-oriented programming and <em>design patterns</em>, and several other best practices in engineering</strong>.
+                                </p> 
+                            </aside> 
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    
+
+    <hr>
+
+    <section id="Background">
+        <div>
+            <h3>Education History</h3>
+            <ul>
+                <li>
+                    <h3>University of California, San Diego</h3>
+                    <iframe src="https://www.ucsd.edu/" width="300" height="300"></iframe>
+                </li>
+            </ul>
+        </div>
+    
+        <hr>
+    </section>
+
+    <section id="Work-History">
+        <div>
+            <h3>
+                Work History
+            </h3>
+            <ul>
+                <li>
+                    <details open>
+                        <summary>Position 1 Overview
+                            
+                        </summary>
+                        <ol>
+                          <li></li>
+                          <li><video controls
+                            width="250"
+                            height="200"
+                            muted>
+                            <source src="https://youtu.be/UZ7a7ufLllo">
+                        </video></li>
+                          <li></li>
+                        </ol>
+                    </details>
+                </li>
+                <li>
+                    <details open>
+                        <summary>Position 2 Overview</summary>
+                        <ol>
+                          <li></li>
+                          <li></li>
+                          <li></li>
+                        </ol>
+                    </details>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div>
+            <svg width="100" height="100">
+                <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+            </svg>
+            <canvas id="canvas" width="300" height="300">
+              </canvas>
+            <form method="get" class="form-example">
+                <div class="form-example">
+                  <label for="name">Enter your name: </label>
+                  <input type="text" name="name" id="name" required>
+                </div>
+                <div class="form-example">
+                  <label for="email">Enter your email: </label>
+                  <input type="email" name="email" id="email" required>
+                </div>
+                <label for="contact-choice">Choose a type of contact:</label>
+                <input list="contact-types" id="contact-choice" name="contact-choice">
+
+                <datalist id="contact-types">
+                    <option value="Mobile">
+                    <option value="Landline">
+                    <option value="Fax">
+                </datalist>
+                
+                <textarea name="message" id="message" cols="30" rows="10">
+
+                </textarea>
+                <button type="submit">Submit</button>
+            </form> 
+            <form>
+                <fieldset>
+                  <legend>Receive My Technical Blogs Updates</legend>
+              
+                  <input type="radio" id="weekly" name="week" value="W">
+                  <label for="weekly">Weekly</label><br>
+              
+                  <input type="radio" id="monthly" name="month" value="M">
+                  <label for="monthly">Monthly</label><br>
+              
+                  <input type="radio" id="never" name="no" value="N" />
+                  <label for="never">Never</label>
+                </fieldset>
+            </form>           
+        </div>
+    </section>
+
+    <div style="text-align:center;">
+        <figure>
+            <img src="favicon-192x192.png" alt="The beautiful MDN logo." />
+            <figcaption>Support MDN!</figcaption>
+        </figure>
+
+        <a href="https://www.linkedin.com/in/ze-sun-4b1b0a23a/">linkedin</a>
+        <a href="https://github.com/ZeSun037">GitHub</a>
+    </div>
+    <footer>
+        <pre>
+                ^ ^ ^       ^ ^ ^
+                ^   ^       ^   ^
+                ^   ^       ^   ^
+                ^   ^       ^   ^
+               ^     ^^^^^^^      ^
+              ^                    ^
+             ^  ----          ^     ^
+             ^                      ^
+             ^           .          ^
+              ^          |         ^          
+                ^ ^ ^ ^ ^ ^ ^ ^ ^      
+        </pre>
+    </footer>
+    <script>
+        var canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        ctx.fillStyle = 'green';
+        ctx.fillRect(10, 10, 100, 100);
+    </script>
+</body>
+</html>
