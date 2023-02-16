@@ -1,11 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Ubuntu:wght@300&display=swap');
 
-:root {
-    --blue: #1e90ff;
-    --white: #ffffff;
-}
-
 * {
+    list-style: none;
     color: grey;
     text-decoration: none;
 }
@@ -22,6 +18,7 @@ html, body {
 hr {
     margin-top: 20px;
 }
+
 
 header {
     position: fixed;
@@ -106,91 +103,51 @@ section {
 
 }
 
-fieldset {
-    border-radius: 15px;
-}
-
-#about {
+#skills {
     padding-top: 75px;
-}
-
-.intro {
-    width: 60%;
-}
-
-.intro fieldset{
-    left: auto;
-    right: auto;
-    width: 100%;
-    font-size: large;
     display: flex;
-    flex-direction: row;
-    margin-left: 20px;
 }
 
-.intro fieldset div {
+#skills div {
     width: 50%;
 }
 
-.intro-text {
-    display: flex; 
-    flex-direction:column;
-    gap: 50px;
-}
-
-.intro-text p {
-    font-weight: bold;
-    margin: 0%;
-}
-
-.intro-img {
-    margin-left: 10px;
-    background-color: var(--white);
-    opacity: 0.5;
-    z-index: 0;
+fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    padding: 20px;
     border-radius: 15px;
 }
 
-.intro-img img {
-    max-width: 100%;
+fieldset h1 {
+    font-size: xx-large;
 }
 
-#education {
-    display: flex;
-    flex-direction: row-reverse;
-    width: 100%;
+fieldset h3 {
+    font-size: 1.3rem;
 }
 
-#education fieldset {
-    margin-right: 20px;
-    width: 60%;
-}
-
-#education td {
-    width: 50%;
-}
-
-.school-profile {
-    text-decoration: overline underline;
+fieldset ul {
     text-align: center;
-    font-size: large;
+    padding: 0%;
 }
 
-#experiences fieldset {
-    margin-left: 20px;
-    width: 60%;
+fieldset li {
+    font-size: 1.1rem;
 }
 
-#experiences table {
-    width: 100%;
+.picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#experiences td {
-    width: 50%;
-}
-
-.work-tech {
-    text-align: right;
+img {
+    width: 200px;
+    height: 200px;
 }
 
 #contact {
@@ -207,8 +164,7 @@ fieldset {
     max-height: 40px;
 }
 
-@media only screen and (max-width: 768px) {
-
+@media only screen and (max-width:768px) {
     #hamNav label {
         color: beige;
         z-index: 9;
@@ -233,47 +189,17 @@ fieldset {
         font-size: small;
     }
 
-    .intro {
-        width: 100%;
+    #skills {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
-    .intro fieldset {
-        width:80%;
-        margin:auto;
-    }
-
-    .intro fieldset div {
-        gap: 20px;
-        width: 100%;
-    }
-
-    .intro-img {
-        width: 0;
+    .picture {
         display: none;
     }
 
-    #education {
-        display: block;
-        width: 100%;
-    }
-
-    #education fieldset {
-        width: 80%;
-        margin: auto;
-    }
-
-    .icon img {
-        width: 150px;
-        height: auto;
-    }
-
-    #experiences {
-        display: block;
-        width: 100%;
-    }
-
-    #experiences  fieldset {
-        width: 80%;
-        margin: auto;
+    .list {
+        width: 85%;
     }
 }
