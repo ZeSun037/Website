@@ -7,6 +7,17 @@
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.14.3/dist/algoliasearch-lite.umd.js" integrity="sha256-dyJcbGuYfdzNfifkHxYVd/rzeR6SLLcDFYEidcybldM=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.51.1/dist/instantsearch.production.min.js" integrity="sha256-y6I4MY/blLHk4a7G33zp97DcnBFRY2iMId4FObo8toI=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"></script>
+    <script type="text/javascript">
+    algoliasearchNetlify({
+        appId: 'J4JI1WVF4L',
+        apiKey: 'b8403042e646d9b9ba4da9d3711888fb',
+        siteId: '180ce2ca-d574-4121-96e7-ab9fb6fa8015',
+        branch: 'javascript',
+        selector: 'div#search',
+    });
+    </script>
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -134,6 +145,11 @@
                     <!--Image cited at https://vectorified.com/-->
                 </td>
             </tr>
+    </section>
+    <section id="search-section">
+        <div id="search">
+
+        </div>
     </section>
 </body>
 </html>
