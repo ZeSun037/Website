@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Simple Dialogs.</h1>
+    <hr>
+    <button id="alert">Alert</button>
+    <button id="confirm">Confirm</button>
+    <button id="prompt">Prompt</button>
+    <button id="safer-prompt">Safer Prompt</button>
+    <hr>
+    <output id="output"></output>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.0/purify.min.js"></script>
+    <script>
+
+        const resetOutput = () => {
+            document.getElementById('output').innerHTML = '';
+        }
+
+        const alertEvent = () => {
+            setTimeout(() => {
+                alert();
+            },0);
+
+            resetOutput();
+        }
+
+        const confirmEvent = () => {
+            setTimeout(function () {
+                let choice = confirm("Do you confirm your input?");
+                output.innerText = `The value returned by the confirm method is : ${choice}`;
+            },0);
+            resetOutput();
+        }
+
+        const promptEvent = () => {
+            setTimeout(function () {
+                let user_input = prompt("Please enter a prompt.");
+                if (user_input === null || user_input === "") {
+                    output.innerText = "User didn’t enter anything";
+                }
+                else {
+                    output.innerText = `User entered: ${user_input}`;
+                }
+            },0);
+            resetOutput();
+        }
+        
+        const saferEvent = () => {
+            setTimeout(function ()  {
+                let user_input = prompt("Please enter a prompt.");
+                let clean = DOMPurify.sanitize(user_input);
+                if (clean === null || clean === "") {
+                    output.innerText = "User didn’t enter anything";
+                }
+                else {
+                    output.innerText = `User entered: ${clean}`;
+                }
+            }, 0);
+            resetOutput();
+        }
+
+        document.getElementById("alert").addEventListener("click", alertEvent);
+
+        document.getElementById("confirm").addEventListener("click", confirmEvent);
+
+        document.getElementById("prompt").addEventListener("click", promptEvent);
+
+        document.getElementById("safer-prompt").addEventListener("click", saferEvent);
+
+    </script>
+</body>
+</html>

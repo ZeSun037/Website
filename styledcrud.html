@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styledblog.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="head-of-page" id="#header">
+        <nav id="hamNav">
+            <!-- (A) HAMBURGER ICON -->
+            <label for="hamburger">&lt;/Ze Sun&gt;</label>
+            <input type="checkbox" id="hamburger"/>
+          
+            <!-- (B) MENU ITEMS -->
+            <ul id="hamItems">
+              <li><a href="index.html">ABOUT</a></li>
+              <li><a href="skills.html">SKILLS</a></li>
+              <li><a href="mailto:zacksun037@gmail.com">CONTACT</a></li>
+              <li><a href="">BLOGS</a></li>
+            </ul>
+            <a id="logo" href="https://github.com/ZeSun037">&lt;/Ze Sun&gt;</a>
+        </nav>
+    </header>
+    <div id="modal">
+        <form id="modal-content" action="#">
+            <fieldset>
+                <legend>Edit an entry</legend>
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title-edit" value="">
+                <label for="time">Date</label>
+                <input type="datetime" name="time" id="time-edit">
+                <label for="summary">Summary</label>
+                <input type="text" name="summary" id="summary-edit">
+                <input id="edit" type="submit" value="Edit">
+            </fieldset>
+        </form>
+    </div>
+    <main style="margin-top: 100px;">
+        <div id="container">
+
+        </div>
+        <section id="post">
+            <form id="form" name="form" action="#">
+                <fieldset>
+                    <legend>Add an entry...</legend>
+                    <label for="title">Title</label>
+                    <input type="text" name="title" id="title" value="">
+                    <label for="time">Date</label>
+                    <input type="datetime" name="time" id="time">
+                    <label for="summary">Summary</label>
+                    <input type="text" name="summary" id="summary">
+                    <input id="add" type="submit" value="Add">
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <script src="styledblog.js">
+    </script>
+</body>
+</html>
