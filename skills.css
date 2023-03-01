@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Ubuntu:wght@300&display=swap');
 
+:root {
+    --blue: #1e90ff;
+    --white: #ffffff;
+}
+
 * {
     list-style: none;
-    color: grey;
+    color: var(--blue);
     text-decoration: none;
 }
 
 html, body {
     font-family: 'Ubuntu', sans-serif;
-    background-color: beige;
+    background-color: var(--white);
     display: flex;
     flex-direction: column;
     margin:0;
@@ -46,13 +51,13 @@ header {
 #hamNav label { font-size: 1.5em; }
 
 #hamNav {
-    background:grey;
+    background:var(--blue);
     display: flex;
 }
 
 #hamNav, #hamItems a {
   padding: 5px;
-  color: beige;
+  color: var(--white);
   text-decoration: none;
 }
 
@@ -63,8 +68,8 @@ header {
 }
 
 #hamItems a:hover { 
-    background: beige; 
-    color: grey;
+    background: var(--white); 
+    color: var(--blue);
 }
 
 #logo {
@@ -78,12 +83,12 @@ header {
     border-radius: 10px;
     transition: 0.25s;
     padding: 5px;
-    color: beige;
+    color: var(--white);
 }
 
 #logo:hover {
-    background: beige; 
-    color: grey;
+    background: var(--white); 
+    color: var(--blue);
 }
 
 @keyframes appear {
@@ -166,7 +171,7 @@ img {
 
 @media only screen and (max-width:768px) {
     #hamNav label {
-        color: beige;
+        color: var(--white);
         z-index: 9;
         display: inline-block;
     }

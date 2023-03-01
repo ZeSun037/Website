@@ -13,8 +13,8 @@ function update() {
                 <time>${arr[i].time}</time>
             </div>
             <div>
-                <button onclick="onDelete(${i})">Delete</button>
-                <button onclick="onEdit(${i})">Edit</button>
+                <a href="" onclick="onDelete(${i})" title="x icons"><img src="delete.png" width="20px" alt="Delete"></a>
+                <a href="" onclick="onEdit(${i})" title="edit icons"><img src="edit.png" width="20px" alt="Edit"></a>
             </div>
         </fieldset>
         `;
