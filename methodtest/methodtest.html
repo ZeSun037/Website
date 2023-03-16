@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method Test</title>
+    <style>
+        fieldset {
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            width: 60%;
+        }
+        
+        input[type="datetime"] {
+            display: none !important;
+        }
+
+        label[for="datetime"] {
+            display: none !important;
+        }
+        
+        div {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+    </style>
+    <script>
+        var getURL = "https://httpbin.org/get";
+        var postURL = "https://httpbin.org/post";
+        var putURL = "https://httpbin.org/put";
+        var deleteURL = "https://httpbin.org/delete";
+
+        function displayResponse(response) {
+            var output = document.getElementById("response");
+            output.innerHTML = `
+            <textarea name="output" id="response-text" cols="110" rows="30">${response}</textarea>`;
+        }
+
+        function clickBtn(req) {
+            var id = document.getElementById("article-id").value;
+            var title = document.getElementById("article-title").value;
+            var content = document.getElementById("article-content").value;
+            var time = document.getElementById("article-time");
+            time.value = new Date();
+
+            var fields = {
+                id : id
+            };
+
+            if (req == "POST" || req == "PUT") {
+                fields.title = title;
+                fields.content = content;
+            }
+
+            var theUrl = `https://httpbin.org/${req.toLowerCase()}?id=${id}`;
+            
+            for (let key in fields) {
+                if (key == "id") {
+                    continue;
+                }
+                if (fields.hasOwnProperty(key)) {
+                    theUrl += `&${key}=${fields[key]}`;
+                }
+            }
+
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onload = function() { 
+                displayResponse(this.responseText);
+            }
+            xmlHttp.open(req, theUrl, true); // true for asynchronous 
+            xmlHttp.send(null);
+        }
+
+    </script>
+</head>
+<body>
+    <form id="form" action="" method="">
+        <fieldset>
+            <legend>My Article</legend>
+            <label for="article-id">Article ID</label>
+            <input type="number" name="id" id="article-id">
+            <label for="article-title">Article Name</label>
+            <input type="text" name="title" id="article-title">
+            <label for="article-content">Article Content</label>
+            <textarea name="content" id="article-content" cols="30" rows="30">Put something here....</textarea>
+            <label for="article-time">Article Time</label>
+            <input type="datetime" name="time" id="article-time">
+        </fieldset>
+        
+        <fieldset>
+            <legend>Response Content</legend>
+            <output name="response" id="response">
+                <textarea name="output" id="response-text" cols="110" rows="30">Response goes here...</textarea>  
+            </output>
+        </fieldset>
+    </form>
+    <div>
+            <button id="getBtn" onclick="clickBtn('GET')">GET</button>
+            <button id="postBtn" onclick="clickBtn('POST')">POST</button>
+            <button id="deleteBtn" onclick="clickBtn('DELETE')">DELETE</button>
+            <button id="putBtn" onclick="clickBtn('PUT')">PUT</button>
+    </div>
+</body>
+</html>
