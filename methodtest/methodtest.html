@@ -66,6 +66,8 @@
                 }
             }
 
+            theUrl += `&time=${time.value}`;
+
             var xmlHttp = new XMLHttpRequest();
             xmlHttp.onload = function() { 
                 displayResponse(this.responseText);

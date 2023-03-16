@@ -3,5 +3,8 @@
 
 ## Sites:
 
-### Main: https://warm-cranachan-09d829.netlify.app
+### Main: https://webcom--dapper-bunny-33d597.netlify.app
+
+### Part 1: https://webcom--dapper-bunny-33d597.netlify.app/methodtest/methodtest.html
+
 
